@@ -118,5 +118,38 @@
       document.getElementById('mensagem').style.display = 'block';
     }
   </script>
+  <script>
+  const numCoracoes = 30;
+
+  for (let i = 0; i < numCoracoes; i++) {
+    const coracao = document.createElement('div');
+    coracao.classList.add('coracao');
+    coracao.style.left = `${Math.random() * 100}vw`;
+    coracao.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    coracao.style.fontSize = `${Math.random() * 24 + 12}px`;
+    coracao.textContent = '❤️';
+    document.body.appendChild(coracao);
+
+    // Remover coração depois que cair
+    coracao.addEventListener('animationend', () => {
+      coracao.remove();
+    });
+  }
+
+  // Fazer corações aparecerem de forma contínua
+  setInterval(() => {
+    const coracao = document.createElement('div');
+    coracao.classList.add('coracao');
+    coracao.style.left = `${Math.random() * 100}vw`;
+    coracao.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    coracao.style.fontSize = `${Math.random() * 24 + 12}px`;
+    coracao.textContent = '❤️';
+    document.body.appendChild(coracao);
+    coracao.addEventListener('animationend', () => {
+      coracao.remove();
+    });
+  }, 500);
+</script>
+
 </body>
 </html>
