@@ -150,6 +150,8 @@
 </head>
 <body>
   <h1 class="fade-in">❤❤️FELIZ DIA DOS NAMORADOS MEU AMOR❤️❤️</h1>
+  <button class="botao-musica" onclick="alertaMusica()">🎵 Clique aqui para dar play na música antes de ler ❤️</button>
+
 
   <img src="./casal.png" alt="Imagem de um casal apaixonado representando nosso amor" width="350" height="400" class="fade-in" />
 
@@ -191,6 +193,17 @@
 
   <!-- Scripts -->
   <script>
+     function mostrarMensagem() {
+    document.getElementById('mensagem').style.display = 'block';
+  }
+
+  function alertaMusica() {
+    alert("Dê play na música e curta cada palavra dessa mensagem com o coração. ❤️");
+    // Aqui você também pode rolar até o player se quiser
+    // document.querySelector("iframe").scrollIntoView({ behavior: "smooth" });
+  }
+
+  // (o restante do código dos corações pode continuar aqui)
     function mostrarMensagem() {
       document.getElementById('mensagem').style.display = 'block';
     }
