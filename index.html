@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffb6c1">
   <title>❤️Feliz Dia dos Namorados❤️</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
   <style>
@@ -52,6 +53,12 @@
       transform: scale(1.05);
     }
 
+    .botao-musica {
+      font-size: 20px;
+      padding: 12px 25px;
+      animation: none;
+    }
+
     #mensagem {
       font-size: 26px;
       color: white;
@@ -68,28 +75,29 @@
       max-width: 660px;
       height: 352px;
     }
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 30px;
-}
 
-.galeria img {
-  width: 180px;
-  height: 200px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease-in-out;
-  display: block;
-}
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
 
-.galeria img:hover {
-  transform: scale(1.1);
-}
+    .galeria img {
+      width: 180px;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease-in-out;
+      display: block;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.1);
+    }
 
     @media (max-width: 600px) {
       iframe {
@@ -146,31 +154,11 @@
         opacity: 0;
       }
     }
-    .botao-musica {
-  font-family: 'Dancing Script', cursive;
-  font-size: 20px;
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.botao-musica:hover {
-  background-color: darkred;
-  transform: scale(1.05);
-}
-
   </style>
 </head>
 <body>
   <h1 class="fade-in">❤❤️FELIZ DIA DOS NAMORADOS MEU AMOR❤️❤️</h1>
   <button class="botao-musica" onclick="alertaMusica()">🎵 Clique aqui para dar play na música antes de ler ❤️</button>
-
 
   <img src="./casal.png" alt="Imagem de um casal apaixonado representando nosso amor" width="350" height="400" class="fade-in" />
 
@@ -193,14 +181,16 @@
     Espero compensar isso com atitudes — fazendo você se sentir especial todos os dias, como a única mulher da minha vida. Se for preciso, vou me esforçar a vida inteira para te conquistar a cada dia.
     Essa música representa tudo que eu quero ser pra você, o homem que quero ser, te conquistando todos os dias, e me esforçando para ser o homem da sua vida.
   </p>
+
   <p>EU TE AMO MIL MILHÕES</p>
 
   <button onclick="mostrarMensagem()">TE AMO!</button>
-
   <div id="mensagem" class="fade-in-slow">Você é o melhor presente que a vida me deu! ❤️</div>
 
   <!-- Música do Spotify -->
-  <iframe src="https://open.spotify.com/embed/track/6mwA6YiKDjAUG8kWvRRUPh?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <iframe src="https://open.spotify.com/embed/track/6mwA6YiKDjAUG8kWvRRUPh?utm_source=generator"
+    frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"></iframe>
 
   <!-- Galeria de fotos -->
   <div class="galeria fade-in">
@@ -208,23 +198,17 @@
     <img src="./foto2.jpeg" alt="Viagem especial" />
     <img src="./foto3.jpeg" alt="Nosso sorriso" />
     <img src="./foto4.jpeg" alt="Abraço apaixonado" />
+    <!-- Adicione mais fotos aqui se quiser -->
   </div>
 
-  <!-- Scripts -->
   <script>
-     function mostrarMensagem() {
-    document.getElementById('mensagem').style.display = 'block';
-  }
-
-  function alertaMusica() {
-    alert("Dê play na música e curta cada palavra dessa mensagem com o coração. ❤️");
-    // Aqui você também pode rolar até o player se quiser
-    // document.querySelector("iframe").scrollIntoView({ behavior: "smooth" });
-  }
-
-  // (o restante do código dos corações pode continuar aqui)
     function mostrarMensagem() {
       document.getElementById('mensagem').style.display = 'block';
+    }
+
+    function alertaMusica() {
+      alert("Dê play na música e curta cada palavra dessa mensagem com o coração. ❤️");
+      document.querySelector("iframe").scrollIntoView({ behavior: "smooth" });
     }
 
     // Corações caindo
@@ -258,4 +242,4 @@
     }, 500);
   </script>
 </body>
-</html>
+</
